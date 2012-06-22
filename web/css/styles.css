@@ -56,6 +56,7 @@ div.side   { float: left; padding: 0 0 0 20px; position: relative; width: 420px;
 .que li:first-child { border-top: none; }
 .que li:last-child { border-bottom: none; }
 .side .que ul { background-color: #fff; border-radius:4px; }
+.side .que li:first-child { background:transparent url('../images/sound.gif') no-repeat 395px 7px; opacity: 0.7; }
 .side .que li h4, .side .que li h4 em, .side .que li span  { font-size: 14px; }
 
 /*blog*/
