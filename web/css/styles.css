@@ -5,7 +5,7 @@ Last Updated: 2012-06-22
 */
 
 html { overflow-y: scroll; }
-body { background: url("../images/bck.jpg") repeat 0 0 #F4F4F4; max-width: 1800px; min-width: 1072px;
+body { background: url("../images/bck.jpg") repeat 0 0 #000; max-width: 1800px; min-width: 1072px;
 	   font:normal 14px/22px 'Pontano Sans', sans-serif; }
 
 h1, h2, h3, h4 { font-family: 'Droid Serif', serif; letter-spacing: -1px; }
@@ -45,7 +45,7 @@ div.cht   { float: left; padding: 0; margin-left:25px; position: relative; width
 div.sml    { display: none; }
 
 #container article { padding: 0 5.5%; margin-bottom: 2em; }
-#container article + article { opacity: 0.3; }
+#container article + article { opacity: 0.3; background:transparent url('../images/lock.png') no-repeat center center; }
 #sidebar article { margin-bottom: 2em; }
 #container.min + #sidebar + #chat { display: block; }
 #container.min { position: relative; left: -380px; width: 250px; margin-right: 0; }
@@ -53,7 +53,7 @@ div.sml    { display: none; }
 #container.min .liquid { display: none; }
 
 /*Queue List*/
-.radio { background:transparent url('../images/albumbck.jpg') no-repeat left top; overflow: hidden; margin-bottom: 20px; border-radius:4px; }
+.radio { background:transparent url('../images/albumbck.jpg') no-repeat left top; overflow: hidden; margin-bottom: 20px; border-radius:4px; box-shadow: 0 1px 2px; rgba(0, 0, 0, 0.1) }
 .radio span { border-radius: 50px; border: 1px solid #bbb; color: #eee; padding: 3px 10px 2px;  text-transform: uppercase; font-size: 10px; margin-bottom: 10px; display: inline-block; opacity:0.5;}
 .radio .atr { padding: 10px 5px; } 
 .radio h3 { color: #fff; letter-spacing: 0; margin: 0; }
@@ -97,7 +97,7 @@ input, textarea { font:normal 14px/22px 'Pontano Sans', sans-serif; }
 .blg a { font-size: 17px; }
 
 /*stat*/
-.sts { display: inline-table; width: 100%; border-bottom: 1px solid rgba(0, 0, 0, 0.05); padding-bottom: 10px; }
+.sts { display: inline-table; width: 100%; padding-bottom: 10px; }
 .sts span { display: block; font-size: 2em; }
 .sts p { font-size: 25px; color: #41B7D8; line-height: 36px; display: table-cell; vertical-align: middle; }
 
