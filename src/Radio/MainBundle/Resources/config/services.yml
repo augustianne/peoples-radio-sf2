@@ -1,0 +1,7 @@
+parameters:
+#    radio_main.example.class: Radio\MainBundle\Example
+
+services:
+#    radio_main.example:
+#        class: %radio_main.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

@@ -1,0 +1,5 @@
+RadioMainBundle_homepage:
+    pattern:  /
+    defaults: { _controller: RadioMainBundle:Main:index }
+    requirements:
+        _method: GET|POST
