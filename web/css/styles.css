@@ -1,0 +1,66 @@
+/* 
+People's Radio Stylesheet
+v1
+Last Updated: 2012-06-22
+*/
+
+html { overflow-y: scroll; }
+body { background: url("../images/body.gif") repeat 0 0 #F4F4F4; max-width: 1800px; min-width: 1072px;
+	   font:normal 14px/22px 'Pontano Sans', sans-serif; }
+
+h1, h2, h3, h4 { font-family: 'Droid Serif', serif; letter-spacing: -1px; }
+
+h2 { font-size: 1.6em; margin-bottom: 20px; color: #ec1447; }
+h3 { font-size: 17px; margin-bottom:  10px; color: #aaa; }
+h4 { font-size: 17px; color: #41B7D8; font-weight: normal; line-height: 19px; font-family: 'Pontano Sans', sans-serif;  }
+
+a { color: #41B7D8; cursor: pointer; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+p { color: #777; }
+
+li { list-style: none; }
+.fl { float: left; }
+.fr { float: right; }
+
+.mr5 { margin-right: 5px; }
+.mr10 { margin-right: 10px; }
+
+/* border */
+.bdl, bdr { overflow: hidden; } 
+.bdl { border-radius:0 10px 10px 0; }
+.bdr { border-radius:10px 0 0 10px;}
+
+#lg { position: absolute; left:37px; top:0; }
+#container { float:left; width: 100%; margin-right: -450px;}
+nav + #container > .liquid { padding-top: 13em; } 
+
+div.liquid { background-color: #fff; margin-right: 450px; border: 1px solid rgba(0, 0, 0, 0.05); box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.05); 
+			 min-width: 620px; padding-top: 20px; margin-top: 20px; }
+div.side   { float: left; padding: 0 0 0 20px; position: relative; width: 420px; margin-top: 20px; }
+
+#container article { padding: 0 5.5%; margin-bottom: 2em; }
+#sidebar article { margin-bottom: 2em; }
+
+/*Queue List*/
+.que li { border-bottom: 1px solid #eee; padding: 5px 0; overflow: hidden; line-height: 22px; }
+.que li span, .que li h4  { float: left; margin-right: 20px; }
+.que li h4 em, .que li span { font-size: 15px; color: #999; margin-left: 10px; }
+.que li:last-child { border-bottom: none; }
+.side .que ul { background-color: #fff; border-radius:4px; }
+.side .que li h4, .side .que li h4 em, .side .que li span  { font-size: 14px; }
+
+/*blog*/
+.blg li { border-bottom: 1px solid #e7e7e7; padding-bottom: 10px; margin-bottom: 10px; }
+.blg li:last-child { border-bottom: none; }
+.blg a { font-size: 17px; }
+
+/*stat*/
+.sts { display: inline-table; width: 100%; border-bottom: 1px solid rgba(0, 0, 0, 0.05); padding-bottom: 10px; }
+.sts span { display: block; font-size: 2em; }
+.sts p { font-size: 25px; color: #41B7D8; line-height: 36px; display: table-cell; vertical-align: middle; }
+
+/*footer*/
+#footer { padding: 20px 3.5%; }
+
+
