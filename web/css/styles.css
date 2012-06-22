@@ -43,6 +43,12 @@ div.side   { float: left; padding: 0 0 0 20px; position: relative; width: 420px;
 #sidebar article { margin-bottom: 2em; }
 
 /*Queue List*/
+.radio { background:transparent url('../images/albumbck.jpg') no-repeat left top; overflow: hidden; margin-bottom: 20px; border-radius:4px; }
+.radio span { border-radius: 50px; border: 1px solid #bbb; color: #eee; padding: 3px 10px 2px;  text-transform: uppercase; font-size: 10px; margin-bottom: 10px; display: inline-block; opacity:0.5;}
+.radio .atr { padding: 10px 5px; } 
+.radio h3 { color: #fff; letter-spacing: 0; margin: 0; }
+.radio em { font: italic 12px 'Pontano Sans',sans-serif; display: block; color: #888; }
+
 .que li { border-bottom: 1px solid #eee; padding: 5px 0; overflow: hidden; line-height: 22px; }
 .que li span, .que li h4  { float: left; margin-right: 20px; }
 .que li h4 em, .que li span { font-size: 15px; color: #999; margin-left: 10px; }
