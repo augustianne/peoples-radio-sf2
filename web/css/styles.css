@@ -25,23 +25,32 @@ li { list-style: none; }
 
 .mr5 { margin-right: 5px; }
 .mr10 { margin-right: 10px; }
+.mt10 { margin-top: 10px; }
 
 /* border */
 .bdl, bdr { overflow: hidden; } 
 .bdl { border-radius:0 10px 10px 0; }
 .bdr { border-radius:10px 0 0 10px;}
 
-#lg { position: absolute; left:37px; top:0; }
+#lg { position: absolute; left:37px; top:0; z-index: 1; }
 #container { float:left; width: 100%; margin-right: -450px;}
+#chat { display: none; }
 nav + #container > .liquid { padding-top: 13em; } 
 
-div.liquid { background-color: rgba(0, 0, 0, 0.3); margin-right: 450px; border: 1px solid rgba(0, 0, 0, 0.05); box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.05); 
+div.liquid,
+div.sml    { background-color: rgba(0, 0, 0, 0.3); margin-right: 450px; border: 1px solid rgba(0, 0, 0, 0.05); box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.05); 
 			 min-width: 620px; padding-top: 20px; margin-top: 20px; }
 div.side   { float: left; padding: 0 0 0 20px; position: relative; width: 420px; margin-top: 20px; }
+div.cht   { float: left; padding: 0; margin-left:25px; position: relative; width: 420px; margin-top: 20px; background-color: #fff; border-radius:4px; }
+div.sml    { display: none; }
 
 #container article { padding: 0 5.5%; margin-bottom: 2em; }
 #container article + article { opacity: 0.3; }
 #sidebar article { margin-bottom: 2em; }
+#container.min + #sidebar + #chat { display: block; }
+#container.min { position: relative; left: -380px; width: 250px; margin-right: 0; }
+#container.min .sml { display: block; min-height: 800px; }
+#container.min .liquid { display: none; }
 
 /*Queue List*/
 .radio { background:transparent url('../images/albumbck.jpg') no-repeat left top; overflow: hidden; margin-bottom: 20px; border-radius:4px; }
@@ -59,6 +68,30 @@ div.side   { float: left; padding: 0 0 0 20px; position: relative; width: 420px;
 .side .que li:first-child { background:transparent url('../images/sound.gif') no-repeat 395px 7px; opacity: 0.7; }
 .side .que li h4, .side .que li h4 em, .side .que li span  { font-size: 14px; }
 
+/*chat*/ 
+.cht li { padding: 10px 20px; margin-bottom: 5px; border-bottom: 1px solid #eee; }
+.cht li:last-child { border-bottom: none; }
+.cht p 	{ line-height: 16px; } 
+.cht frm { padding: 10px 20px; }
+
+/*Inputs*/
+input, textarea { font:normal 14px/22px 'Pontano Sans', sans-serif; }
+.frm textarea 	{ border: 1px solid #d1eff8; background-color:#edfbff; border-radius: 4px; resize:none; padding: 4px 5px; width: 95%; }
+.frm input	   	{ 	color: #fff; border: 0; border-radius: 4px; cursor: pointer; font-size: 12px; padding: 5px 15px; font-size: 14px;
+					background-image: linear-gradient(bottom, rgb(128,0,87) 28%, rgb(173,136,136) 82%);
+				  	background-image: -o-linear-gradient(bottom, rgb(128,0,87) 28%, rgb(173,136,136) 82%);
+					background-image: -moz-linear-gradient(bottom, rgb(128,0,87) 28%, rgb(173,136,136) 82%);
+					background-image: -webkit-linear-gradient(bottom, rgb(128,0,87) 28%, rgb(173,136,136) 82%);
+					background-image: -ms-linear-gradient(bottom, rgb(128,0,87) 28%, rgb(173,136,136) 82%);
+
+					background-image: -webkit-gradient(
+					linear,
+					left bottom,
+					left top,
+					color-stop(0.28, rgb(128,0,87)),
+					color-stop(0.82, rgb(173,136,136))
+				); }
+
 /*blog*/
 .blg li { padding-bottom: 10px; margin-bottom: 10px; }
 .blg a { font-size: 17px; }
@@ -70,5 +103,6 @@ div.side   { float: left; padding: 0 0 0 20px; position: relative; width: 420px;
 
 /*footer*/
 #footer { padding: 20px 3.5%; }
+
 
 
