@@ -1,39 +1,34 @@
 <?php
+
 namespace Radio\MainBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+
 /**
- * @ORM\Entity
- * @ORM\Table(name="track_vote")
+ * Radio\MainBundle\Entity\TrackVote
  */
 class TrackVote
 {
     /**
-     * @ORM\Column(type="integer")
-     * @IgnoreAnnotation("fn")
+     * @var integer $trackId
      */
-    protected $trackId;
+    private $trackId;
 
     /**
-     * @ORM\Column(type="integer")
+     * @var integer $allVotes
      */
-    protected $allVotes;
+    private $allVotes;
 
     /**
-     * @ORM\Column(type="integer")
+     * @var integer $tempVotes
      */
-    protected $tempVotes;
-
+    private $tempVotes;
 
     /**
-     * Set trackId
-     *
-     * @param integer $trackId
+     * @var Radio\MainBundle\Entity\Track
      */
-    public function setTrackId($trackId)
-    {
-        $this->trackId = $trackId;
-    }
+    private $track;
+
 
     /**
      * Get trackId
@@ -83,5 +78,25 @@ class TrackVote
     public function getTempVotes()
     {
         return $this->tempVotes;
+    }
+
+    /**
+     * Set track
+     *
+     * @param Radio\MainBundle\Entity\Track $track
+     */
+    public function setTrack(\Radio\MainBundle\Entity\Track $track)
+    {
+        $this->track = $track;
+    }
+
+    /**
+     * Get track
+     *
+     * @return Radio\MainBundle\Entity\Track 
+     */
+    public function getTrack()
+    {
+        return $this->track;
     }
 }

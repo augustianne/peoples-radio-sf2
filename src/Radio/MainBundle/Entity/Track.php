@@ -3,43 +3,42 @@
 namespace Radio\MainBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+
 /**
- * @ORM\Entity
- * @ORM\Table(name="track")
+ * Radio\MainBundle\Entity\Track
  */
 class Track
 {
     /**
-     * @ORM\Id
-     * @ORM\Column(type="integer")
-     * @ORM\GeneratedValue(strategy="AUTO")
+     * @var integer $id
      */
-    protected $id;
+    private $id;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @var string $filename
      */
-    protected $filename;
+    private $filename;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @var string $name
      */
-    protected $name;
+    private $name;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @var string $artist
      */
-    protected $artist;
+    private $artist;
 
     /**
-     * @ORM\Column(type="string", length=10)
+     * @var string $time
      */
-    protected $time;
+    private $time;
 
     /**
-     * @ORM\Column(type="string", length=45)
+     * @var string $genre
      */
-    protected $genre;
+    private $genre;
+
 
     /**
      * Get id

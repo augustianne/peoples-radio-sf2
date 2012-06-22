@@ -3,33 +3,27 @@
 namespace Radio\MainBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+
 /**
- * @ORM\Entity
- * @ORM\Table(name="track")
+ * Radio\MainBundle\Entity\Community
  */
 class Community
 {
     /**
-     * @ORM\Column(type="integer")
-     * @IgnoreAnnotation("fn")
+     * @var integer $trackId
      */
-    protected $trackId;
+    private $trackId;
 
     /**
-     * @ORM\Column(type="smallint")
+     * @var smallint $playCount
      */
-    protected $playCount;
-
+    private $playCount;
 
     /**
-     * Set trackId
-     *
-     * @param integer $trackId
+     * @var Radio\MainBundle\Entity\Track
      */
-    public function setTrackId($trackId)
-    {
-        $this->trackId = $trackId;
-    }
+    private $track;
+
 
     /**
      * Get trackId
@@ -59,5 +53,25 @@ class Community
     public function getPlayCount()
     {
         return $this->playCount;
+    }
+
+    /**
+     * Set track
+     *
+     * @param Radio\MainBundle\Entity\Track $track
+     */
+    public function setTrack(\Radio\MainBundle\Entity\Track $track)
+    {
+        $this->track = $track;
+    }
+
+    /**
+     * Get track
+     *
+     * @return Radio\MainBundle\Entity\Track 
+     */
+    public function getTrack()
+    {
+        return $this->track;
     }
 }

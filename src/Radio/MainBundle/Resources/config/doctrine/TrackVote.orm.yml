@@ -1,0 +1,33 @@
+Radio\MainBundle\Entity\TrackVote:
+  type: entity
+  table: track_vote
+  fields:
+    trackId:
+      id: true
+      type: integer
+      unsigned: false
+      nullable: false
+      column: track_id
+      generator:
+        strategy: IDENTITY
+    allVotes:
+      type: integer
+      unsigned: false
+      nullable: true
+      column: all_votes
+    tempVotes:
+      type: integer
+      unsigned: false
+      nullable: true
+      column: temp_votes
+  oneToOne:
+    track:
+      targetEntity: Track
+      cascade: {  }
+      mappedBy: null
+      inversedBy: null
+      joinColumns:
+        track_id:
+          referencedColumnName: id
+      orphanRemoval: false
+  lifecycleCallbacks: {  }

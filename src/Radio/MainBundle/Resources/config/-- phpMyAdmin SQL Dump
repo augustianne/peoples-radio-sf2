@@ -1,0 +1,81 @@
+-- phpMyAdmin SQL Dump
+-- version 2.11.9.5
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost
+-- Generation Time: Jun 22, 2012 at 01:46 PM
+-- Server version: 5.0.77
+-- PHP Version: 5.1.6
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+--
+-- Database: `peoples_radio`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `community`
+--
+
+CREATE TABLE IF NOT EXISTS `community` (
+  `track_id` int(11) unsigned NOT NULL,
+  `play_count` smallint(6) default NULL,
+  PRIMARY KEY  (`track_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `community`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `track`
+--
+
+CREATE TABLE IF NOT EXISTS `track` (
+  `id` int(11) unsigned NOT NULL auto_increment,
+  `filename` varchar(255) NOT NULL,
+  `name` varchar(255) default NULL,
+  `artist` varchar(255) default NULL,
+  `time` varchar(10) default NULL,
+  `genre` varchar(45) default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+--
+-- Dumping data for table `track`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `track_vote`
+--
+
+CREATE TABLE IF NOT EXISTS `track_vote` (
+  `track_id` int(10) unsigned NOT NULL,
+  `all_votes` int(11) unsigned default NULL,
+  `temp_votes` int(11) unsigned default NULL,
+  PRIMARY KEY  (`track_id`),
+  KEY `track_vote_id` (`track_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `track_vote`
+--
+
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `track_vote`
+--
+ALTER TABLE `track_vote`
+  ADD CONSTRAINT `track_vote_id` FOREIGN KEY (`track_id`) REFERENCES `track` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
